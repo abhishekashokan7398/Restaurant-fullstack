@@ -25,7 +25,10 @@ const connectDB = async () => {
   }
 };
 connectDB();
-
+app.get('/',(req,res)=>
+{
+  res.json("backend connected ");
+})
 // Routes
 app.use("/api/menu", require("./routes/menu"));
 app.use("/api/user", require("./routes/user"));
