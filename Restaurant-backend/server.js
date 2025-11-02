@@ -7,10 +7,18 @@ dotenv.config();
 const app = express();
 
 // CORS: allow your frontend origin
+// app.use(cors({
+//   origin: "https://restaurantabhi.netlify.app/",
+//   credentials: true
+// }));
+
+
+
 app.use(cors({
-  origin: "https://restaurantabhi.netlify.app/",
-  credentials: true
+  origin: '*' // Insecure for production!
 }));
+
+
 
 app.use(express.json());
 
