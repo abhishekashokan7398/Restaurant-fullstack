@@ -4,7 +4,7 @@ import "../../styles/addtable.css";
 import { FaChair } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-const API_URL = "http://localhost:8000/api/tables";
+const API_URL = "https://restaurant-fullstack-svjm.vercel.app/api/tables";
 
 // ✅ TableCard component
 const TableCard = ({ table, onDelete }) => {

@@ -21,7 +21,7 @@ function UserForm({ onClose }) {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:8000/api/user", formData);
+      const res = await axios.post("https://restaurant-fullstack-svjm.vercel.app/api/user", formData);
 
       toast.success("User Login successfully!", {
         position: "top-center",

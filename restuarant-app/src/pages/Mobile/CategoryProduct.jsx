@@ -24,7 +24,7 @@ function CategoryProduct({ category, userData, searchQuery }) {
     setLoading(true);
     setError(null);
     try {
-      const url = `http://localhost:8000/api/menu/category/${category}?offset=${offset}&limit=${ITEMS_PER_PAGE}`;
+      const url = `https://restaurant-fullstack-svjm.vercel.app/api/menu/category/${category}?offset=${offset}&limit=${ITEMS_PER_PAGE}`;
       const res = await axios.get(url);
       const dataArr = Array.isArray(res.data)
         ? res.data

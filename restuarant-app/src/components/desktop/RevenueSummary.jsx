@@ -12,7 +12,7 @@ function RevenueSummary() {
     const fetchRevenue = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:8000/api/order/revenue/summary?period=${period}`
+          `https://restaurant-fullstack-svjm.vercel.app/api/order/revenue/summary?period=${period}`
         );
         console.log("Revenue summary response:", res.data);
         if (res.data.success) {

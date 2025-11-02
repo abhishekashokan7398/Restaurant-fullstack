@@ -16,7 +16,7 @@ function OrderSummary() {
   useEffect(() => {
     const fetchSummary = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/api/order/count/by-type");
+        const res = await axios.get("https://restaurant-fullstack-svjm.vercel.app/api/order/count/by-type");
         console.log("API response:", res.data);
 
         const dataForPeriod = res.data[period] || { dineIn: 0, takeAway: 0, served: 0 };

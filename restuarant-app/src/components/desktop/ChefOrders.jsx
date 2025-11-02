@@ -11,7 +11,7 @@ const ChefOrders = () => {
     const fetchChefData = async () => {
       try {
         // Step 1️⃣ — Fetch all chefs
-        const chefsResponse = await axios.get("http://localhost:8000/api/chefs");
+        const chefsResponse = await axios.get("https://restaurant-fullstack-svjm.vercel.app/api/chefs");
         const chefs = chefsResponse.data;
 
         // Step 2️⃣ — For each chef, fetch their order count
@@ -19,7 +19,7 @@ const ChefOrders = () => {
           chefs.map(async (chef) => {
             try {
               const countRes = await axios.get(
-                `http://localhost:8000/api/order/chef/orders/${chef._id}`
+                `https://restaurant-fullstack-svjm.vercel.app/api/order/chef/orders/${chef._id}`
               );
               return { ...chef, totalCount: countRes.data.totalOrders || 0 };
             } catch (err) {

@@ -9,7 +9,7 @@ function Product() {
   useEffect(() => {
     const fetchFoods = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/api/menu");
+        const res = await axios.get("https://restaurant-fullstack-svjm.vercel.app/api/menu");
 
         // Sort oldest → newest so new items appear last
         const sortedFoods = res.data.sort(
@@ -101,7 +101,7 @@ function Product() {
                     src={
                       food.imageUrl.startsWith("http")
                         ? food.imageUrl
-                        : `http://localhost:8000${food.imageUrl}`
+                        : `https://restaurant-fullstack-svjm.vercel.app${food.imageUrl}`
                     }
                     alt={food.name}
                     style={{

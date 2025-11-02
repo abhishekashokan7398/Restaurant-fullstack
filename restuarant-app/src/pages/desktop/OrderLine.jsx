@@ -10,7 +10,7 @@ function Orderline() {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await fetch("http://localhost:8000/api/order");
+        const response = await fetch("https://restaurant-fullstack-svjm.vercel.app/api/order");
         const data     = await response.json();
         if (!data.success) {
           throw new Error(data.message || "Failed to fetch orders");

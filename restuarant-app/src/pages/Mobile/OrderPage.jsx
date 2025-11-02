@@ -40,7 +40,7 @@ function OrderPage() {
 
       try {
         const res = await axios.get(
-          `http://localhost:8000/api/user?contact=${user.phone}`
+          `https://restaurant-fullstack-svjm.vercel.app/api/user?contact=${user.phone}`
         );
         const matched = res.data;
 
@@ -61,7 +61,7 @@ function OrderPage() {
   useEffect(() => {
     const fetchChefs = async () => {
       try {
-        const chefRes = await axios.get("http://localhost:8000/api/chefs");
+        const chefRes = await axios.get("https://restaurant-fullstack-svjm.vercel.app/api/chefs");
         setChefs(chefRes.data);
       } catch (err) {
         console.error("Error fetching chefs:", err);
@@ -205,7 +205,7 @@ function OrderPage() {
         payload.partySize = validPartySize;
       }
 
-      const res = await axios.post("http://localhost:8000/api/order", payload, {
+      const res = await axios.post("https://restaurant-fullstack-svjm.vercel.app/api/order", payload, {
         timeout: 10000,
       });
 

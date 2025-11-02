@@ -96,7 +96,7 @@ export const Cards = ({ filterText = "" }) => {
   useEffect(() => {
     const fetchTotalClients = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/api/user/count/unique");
+        const res = await axios.get("https://restaurant-fullstack-svjm.vercel.app/api/user/count/unique");
         const totalClients = res.data.uniqueUserCount;
 
         // ✅ Add leading zero if less than 10
@@ -123,7 +123,7 @@ export const Cards = ({ filterText = "" }) => {
 useEffect(() => {
   const fetchTotalOrders = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/api/order/count");
+      const res = await axios.get("https://restaurant-fullstack-svjm.vercel.app/api/order/count");
       console.log("Order-count API response:", res.data);
 
       const totalOrder = res.data.totalOrders;  // use this property
@@ -151,7 +151,7 @@ useEffect(() => {
 useEffect(() => {
   const fetchTotalRevenue = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/api/order/revenue");
+      const res = await axios.get("https://restaurant-fullstack-svjm.vercel.app/api/order/revenue");
       console.log("Order-count API response:", res.data);
 
       const totalRevenue = res.data.totalRevenue;  // use this property

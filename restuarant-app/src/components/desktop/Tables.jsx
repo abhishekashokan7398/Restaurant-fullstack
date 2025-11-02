@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../../styles/tables.css";
 
-const API_URL = "http://localhost:8000/api/tables";
+const API_URL = "https://restaurant-fullstack-svjm.vercel.app/api/tables";
 
 function Tables() {
   const [tables, setTables] = useState([]);

@@ -15,7 +15,7 @@ export const UserProvider = ({ children }) => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/api/user/profile", {
+        const res = await axios.get("https://restaurant-fullstack-svjm.vercel.app/api/user/profile", {
           withCredentials: true,
         });
         setUser(res.data.user);
