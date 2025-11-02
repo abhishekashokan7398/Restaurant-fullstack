@@ -1,0 +1,96 @@
+.category-scroll-container {
+  -ms-overflow-style: none; /* IE, Edge */
+  scrollbar-width: none; /* Firefox */
+  scroll-behavior: smooth;
+}
+.category-scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+/* Universal mobile styles for all display ratios */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Universal responsive design */
+* {
+  box-sizing: border-box;
+}
+.mobile-home {
+  width: 100%;
+  max-width: 424px;
+  margin: 0 auto;
+  background: #fff;
+  
+  /* modern ratio */
+  aspect-ratio: 424/939;
+  
+  /* fallback for browsers without aspect-ratio */
+  position: relative;
+}
+.no-aspect-ratio .mobile-home {
+  /* will apply only if browser lacks support (you can detect via @supports) */
+  width: 100%;
+  max-width: 424px;
+  margin: 0 auto;
+  padding-top: calc((939 / 424) * 100%);
+  /* content inside must be absolutely positioned */
+}
+
+/* Media tweaks */
+@media (max-aspect-ratio: 3/4) {
+  .mobile-home { font-size: 90%; }
+}
+@media (min-aspect-ratio: 16/9) {
+  .mobile-home { font-size: 110%; }
+}
+
+
+/* Ensure proper scaling on all devices */
+@media (max-width: 768px) {
+  html {
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
+  }
+}
+
+/* Universal touch improvements */
+button, input, select, textarea {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Prevent zoom on iOS inputs */
+@media screen and (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px !important; /* Prevent zoom on focus */
+  }
+}
+
+/* Universal safe area support */
+@supports (padding: max(0px)) {
+  .mobile-safe {
+    padding-left: max(4%, env(safe-area-inset-left));
+    padding-right: max(4%, env(safe-area-inset-right));
+    padding-top: max(4%, env(safe-area-inset-top));
+    padding-bottom: max(2vh, env(safe-area-inset-bottom));
+  }
+}
+
+/* Universal aspect ratio handling */
+@media (max-aspect-ratio: 3/4) {
+  /* Very tall screens */
+  .mobile-home {
+    font-size: 90%;
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  /* Very wide screens */
+  .mobile-home {
+    font-size: 110%;
+  }
+}

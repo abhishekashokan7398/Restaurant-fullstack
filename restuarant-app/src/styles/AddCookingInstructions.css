@@ -1,0 +1,128 @@
+/* Full-screen overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;       /* center vertically */
+  z-index: 1000;
+ 
+}
+
+/* Center popup box */
+.popup {
+  position: relative;         /* so close-button positioning works */
+  width: 90%;
+  height:250px;
+  background: #f7faf7;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeInScale 0.3s ease-out;
+   margin-left: 10px;
+}
+
+/* Close button (circle with X) */
+.close-btn {
+  position: absolute;
+  top: -80px;
+  right: 193px;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Title */
+.popup-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Textarea */
+.instruction-box {
+  width: 95%;
+  height: 50px;
+  border-radius: 8px;
+  border: 1.5px solid #ddd;
+  padding: 10px;
+  font-size: 15px;
+  resize: none;
+  background: white;
+  outline: none;
+}
+
+.instruction-box:focus {
+  border-color: #111;
+}
+
+/* Note text */
+.note {
+  font-size: 12px;
+  color: #7a7a7a;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+/* Button container */
+.popup-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Buttons */
+.cancel-btn,
+.next-btn {
+  flex: 1;
+  height: 42px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #f1f1f1;
+  color: #333;
+  margin-right: 10px;
+}
+
+.next-btn {
+  background: #333;
+  color: white;
+}
+
+/* Mobile friendly */
+@media (max-width: 600px) {
+  .popup {
+    width: 95%;
+    padding: 16px;
+    border-radius: 16px;
+  }
+}
+
+/* Fade-in + scale animation */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

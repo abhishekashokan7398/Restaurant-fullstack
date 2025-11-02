@@ -1,0 +1,106 @@
+/* navbar.css */
+
+/* --- Main Container: Positioning and Layout --- */
+.navbar-container {
+    /* Set fixed position relative to the viewport (as requested earlier) */
+    position: fixed;  
+    left: 40px;      
+    display: flex;   /* Maintains the layout of the icon and search bar */
+    align-items: center; /* Vertically center items */
+    gap: 20px;       /* Spacing between the icon and the search group */
+       /* Ensure it stays on top of other elements */
+}
+
+/* --- Icon Styles --- */
+.icon-wrapper {
+    /* Consolidates the icon container's fixed dimensions and styling */
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: A nice touch */
+    overflow: hidden; /* Ensures image is perfectly contained */
+}
+
+.profile-icon {
+    /* Ensures the image fills its wrapper and is round */
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: block;
+}
+
+/* --- Search Group Styles --- */
+.search-group {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+ 
+    /* This replaces the redundant inner style={{display:'flex',marginLeft:'20px'}} */
+}
+
+.search-input {
+    
+    border: 2px solid #ddd;
+    border-radius: 32px;
+    font-size: 16px;
+    outline: none;
+    width: 438px;
+    height: 55px; /* Match the icon height */
+    box-sizing: border-box; /* Include padding in height calculation */
+    position: relative;
+    padding-left: 25px;
+}
+
+
+
+.dropdown-button {
+    background-color: #e0e0e0;
+    color: #626262;
+   width: 35px;
+    height: 35px;
+   position: absolute;
+   right:17px;
+   top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Rounded right corner only */
+    border: 1px solid #ddd;
+
+   
+}
+.search-group1 {
+    display: flex;
+    align-items: center;
+    position: relative; /* Needed for absolute positioning of icon */
+    margin-left: 20px;
+}
+
+.dropdown-button1 {
+    background-color: #e0e0e0;
+    color: #626262;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 10px;            /* inside the input */
+    top: 50%;              /* vertical center */
+    transform: translateY(-50%); /* perfect vertical centering */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.search-input1 {
+    border: 2px solid #ddd;
+    border-radius: 32px;
+    font-size: 16px;
+    outline: none;
+    width: 438px;
+    height: 55px;
+    box-sizing: border-box;
+    padding-left: 55px; /* space for magnifying glass */
+}

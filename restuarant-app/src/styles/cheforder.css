@@ -1,0 +1,50 @@
+/* Container for centering (Optional, but good practice) */
+.table-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-color:white; /* Page background color */
+}
+
+/* Table Styling */
+.chef-orders-table {
+    border-collapse: collapse;
+    width: 94%; /* Adjust as needed, maybe a max-width */
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: white;
+    font-family: Arial, sans-serif;
+    margin-left: 1%;
+}
+
+/* Table Header (<thead>) Styling */
+.chef-orders-table thead tr {
+    background-color: #f2f2f2; /* Light gray background for header */
+}
+
+.chef-orders-table th {
+    text-align: left;
+    padding: 3px 15px;
+    color: black;
+    font-weight: 600; /* Slightly bolder than regular text */
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+/* Table Data (<td>) Styling */
+.chef-orders-table td {
+    padding: 5px 15px;
+    border-bottom: 1px solid #eee; /* Light line between rows */
+    color:black;
+     font-size: 14px;
+}
+
+/* Remove the border from the last row */
+.chef-orders-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Optional: Hover effect for rows */
+.chef-orders-table tbody tr:hover {
+    background-color: #fafafa;
+}

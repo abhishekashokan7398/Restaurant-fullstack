@@ -1,0 +1,141 @@
+.orderline-container {
+  padding: 20px;
+  background-color: #f8fafc;
+ 
+}
+
+.orderline-title {
+  color: #565656;
+  font-family: "Inter";
+  font-weight: 700;
+  margin-left: 20px;
+  margin-top: -10px;
+}
+
+/* Grid for 4 per row */
+.orderline-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card styles */
+.order-card {
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+  font-family: "Inter", sans-serif;
+  height: 300px;
+}
+
+.order-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Header */
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.order-id {
+  font-weight: 600;
+  color: #333;
+}
+
+.order-type-badge {
+  text-align: right;
+  border-radius: 10px;
+  padding: 5px 10px;
+  color: #333;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Status color blocks */
+.orange {
+  background-color: #fff6e5;
+}
+.orange .order-type-badge {
+  background-color: #f9d49a;
+}
+.orange .order-status-btn {
+  background-color: #f6a84c;
+}
+
+.green {
+  background-color: #e8fbea;
+}
+.green .order-type-badge {
+  background-color: #b7f3c0;
+}
+.green .order-status-btn {
+  background-color: #4fd372;
+}
+
+.gray {
+  background-color: #e8eff6;
+}
+.gray .order-type-badge {
+  background-color: #cfd8dc;
+}
+.gray .order-status-btn {
+  background-color: #90a4ae;
+}
+
+/* Details */
+.order-details {
+  font-size: 13px;
+  margin-top: 10px;
+  color: #444;
+}
+.order-details hr {
+  margin: 10px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.order-items {
+  font-size: 13px;
+  color: #555;
+}
+
+/* Footer */
+.order-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.order-status-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: default;
+}
+
+/* Responsive layout */
+@media (max-width: 1200px) {
+  .orderline-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .orderline-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .orderline-grid {
+    grid-template-columns: 1fr;
+  }
+}

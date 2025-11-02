@@ -1,0 +1,89 @@
+/* 🌿 Base layout */
+body {
+  background-color: green;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* centers message vertically */
+  align-items: center;       /* centers message horizontally */
+  font-family: Arial, sans-serif;
+  position: relative;        /* allows absolute positioning inside */
+}
+
+/* Main success message */
+.message {
+  text-align: center;
+  color: azure;
+}
+
+/* Tick icon */
+.tick-icon {
+  background-color: white;
+  color: green;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 48px;
+  margin-top: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Redirect message fixed to bottom */
+.redirectmessage {
+  position: absolute;
+  bottom: 30px;              /* distance from bottom */
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+}
+
+/* 📱 Mobile (≤480px) */
+@media screen and (max-width: 480px) {
+  .message h1 {
+    font-size: 22px;
+  }
+
+  .tick-icon {
+    font-size: 36px;
+    padding: 10px;
+  }
+
+  .redirectmessage {
+    font-size: 16px;
+    bottom: 20px;
+    left:10px;
+  }
+}
+
+/* 💻 Tablets (481px–768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .message h1 {
+    font-size: 28px;
+  }
+
+  .tick-icon {
+    font-size: 50px;
+    padding: 14px;
+  }
+
+  .redirectmessage {
+    font-size: 18px;
+  }
+}
+
+/* 🖥️ Desktop (≥769px) */
+@media screen and (min-width: 769px) {
+  .message h1 {
+    font-size: 36px;
+  }
+
+  .tick-icon {
+    font-size: 60px;
+    padding: 18px;
+  }
+
+  .redirectmessage {
+    font-size: 20px;
+  }
+}

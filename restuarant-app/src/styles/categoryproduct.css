@@ -1,0 +1,151 @@
+.category-product-container {
+  padding: 5px 2px;
+  background-color: #fff;
+  height: 60vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+
+  /* 👇 Scroll snap for smooth full-row transitions */
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.category-product-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Section heading */
+.category-product-container h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 5px 8px;
+  color: #333;
+  text-align: left;
+}
+
+/* ✅ Two-column grid with equal size cards */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  justify-items: center;
+  padding: 0 4px 10px;
+  width: 50px;
+  height: 120px;
+}
+
+/* ✅ Each row behaves as a snap section */
+.product-card {
+  width: 100px;
+  height: 100px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease;
+
+  /* 👇 Snap alignment for full-row scroll */
+  scroll-snap-align: start;
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+}
+
+/* Product image */
+.product-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Content layout */
+.product-card-content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+
+.product-card-content h3 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+}
+
+.product-card-content p {
+  font-size: 12px;
+  color: #666;
+  margin: 2px 0 0;
+}
+
+/* Add button */
+.add-btn {
+  background-color: #ffb703;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.add-btn:hover {
+  background-color: #ffa41b;
+}
+
+/* No product text */
+.no-products {
+  text-align: center;
+  color: #999;
+  margin-top: 40px;
+  font-size: 15px;
+}
+
+/* ✅ For smaller devices (320–400px) */
+@media (max-width: 428px) {
+  .product-list {
+    gap: 6px;
+    margin-left: 7px;
+  }
+
+  .product-card {
+    width: 200px;
+    height: 160px;
+   
+  }
+
+  .product-card img {
+    height: 90px;
+  }
+  .product-card-content
+  {
+    background-color: #D9D9D9;
+    height: 70px;
+     border-radius: 7px;
+  }
+
+  .product-card-content h3 {
+    font-size: 10px;
+  }
+
+  .product-card-content p {
+    font-size: 11px;
+  }
+
+  .add-btn {
+    width: 24px;
+    height: 24px;
+  }
+}

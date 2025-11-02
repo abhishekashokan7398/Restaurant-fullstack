@@ -1,0 +1,30 @@
+/* ordersummary.css */
+
+/* --- General Styling and Container --- */
+.summary {
+    width: 410px;
+   
+    background-color: #F0F5F3;
+    border-radius: 8px;
+    border: 2px solid #D9D9D9 ;
+    position: fixed;
+    
+    
+}
+.header
+{
+    width: 410px;
+    height: 80px;
+     border-bottom: 2px solid #D9D9D9 ;
+
+
+}
+
+
+
+
+/* --- Header Section (Title and Dropdown) --- */
+.disable-clicks * {
+  pointer-events: none !important;
+  cursor: default !important;
+}

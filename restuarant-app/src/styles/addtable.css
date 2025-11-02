@@ -1,0 +1,127 @@
+.table-grid-container {
+    grid-template-columns: repeat(7, 140px);  
+    display: grid;
+  row-gap: 7px;
+  column-gap: 50px;
+    position: relative; 
+    background-color: white;     
+    border-radius: 8px;
+    margin-left: 40px;
+   
+}
+
+.table-card {
+   
+    height: 54px; 
+    background-color: #F0F5F3;
+    border-radius: 8px;
+    border: 2px solid #D9D9D9;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    padding-top: -10px;
+   
+    
+}
+
+.table-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    height: 50px;
+    margin-top: -15px;
+}
+
+.table-number-text {
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    margin-top: 30px;
+     font-family: Poppins,sans-serif;
+}
+
+.table-number {
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    line-height: 1;
+    font-family: Poppins;
+}
+
+
+.delete-button {
+    position: absolute;
+    top: 5px;
+    right: -9px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 5px;
+}
+
+.delete-button:disabled {
+    cursor: not-allowed;
+    color: #ccc;
+}
+
+.table-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 19px;
+    font-size: 10px;
+    color: black;
+    height: 15px;
+    margin-top: 5px;
+}
+
+.chair-count {
+    font-size: 10px;
+    font-family: monospace;
+    color: black;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.add-table-card
+{
+    width:150px;
+    height:90px;
+    display: flex;
+    border: 2px dashed #999999;
+    
+ 
+    justify-content: center;
+    align-items: center;
+}
+.plus-sign
+{
+    font-size: 30px;
+    font-weight: bolder;
+}
+.popup
+{
+    width: 190px;
+    height: 130px;
+    box-shadow: 0 4px 8px rgba(56, 51, 51, 0.1);
+     background-color: #F0F5F3;
+     border-radius: 18px;
+     margin-left: -130px;
+     
+    
+}
+.body
+{
+    width: 97%;
+    min-height:87vh ;
+    background-color: white;
+    margin-left:10px;
+    margin-top: 65px;
+    border-radius: 32px;
+    
+  
+   
+}

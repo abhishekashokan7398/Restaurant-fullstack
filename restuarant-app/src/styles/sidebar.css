@@ -1,0 +1,42 @@
+.side
+{
+    width: 65px;
+    height: 85vh;
+    background-color:white ;
+    border-radius: 30px;
+    position: fixed;
+    margin-top: 55px;
+   
+  
+  
+}
+.side-icon
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #F0F5F3 ;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+
+      color: black;
+      
+}
+.side-icon-bottom
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #F0F5F3 ;
+    
+    bottom: 20px;
+    position: fixed;
+  
+    
+}
+.side-icon.active {
+  background-color:#D9D9D9; /* Change this to your desired color */
+}
