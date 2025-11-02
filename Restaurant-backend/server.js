@@ -8,7 +8,7 @@ const app = express();
 
 // CORS: allow your frontend origin
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "https://restaurantabhi.netlify.app/",
   credentials: true
 }));
 
